@@ -145,6 +145,22 @@ img{
     background-color: white;
 }
 
+footer{
+    background-color: var(--darkCyan);
+}
+
+.container.containerContact{
+    padding: 100px 50px 50px 50px;
+    width: 25%;
+}
+
+.contactLogo{
+    border: 1px solid white;
+    color: white;
+}
+
+
+
 @media only screen and (max-width:450px) {
     .container{
         padding: 20px;
