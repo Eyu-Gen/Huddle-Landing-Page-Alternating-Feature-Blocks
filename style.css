@@ -48,12 +48,33 @@ body{
     background-color: white;
     border: none;
     border-radius: 20px;
+    transition: opacity 0.2s linear;
+    box-shadow: 0px 2px 5px rgba(132, 130, 130, 0.571);
+}
+
+.button:hover{
+    opacity: 70%;
+    cursor: pointer;
 }
 
 img, svg{
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+a{
+    text-decoration: none;
+    color: var(--paleCyan);
+    cursor: pointer;
+    font-family: var(--openSans);
+    font-size: 13px;
+    transition: text-decoration 0.2s linear;
+    width: fit-content;
+}
+
+a:hover{
+    text-decoration: underline;
 }
 
 .container.hero{
@@ -147,24 +168,52 @@ img, svg{
 
 footer{
     background-color: var(--darkCyan);
+    padding: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.container.containerContact{
-    padding: 100px 50px 50px 50px;
-    border: 1px solid red;
+.contentContact, .contentHelp, .contentSocialmedia{
+    width: 25%;
 }
 
-.subcontainerContact{
-    border: 1px solid red;
+.elementContact, .socialMedias{
+    margin: 15px 0px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.contactLogo{
-    border: 1px solid white;
-    color: white;
-    width: 150px;
+.imageSection{
+    width: 13px;
+    height: fit-content;
 }
 
+.paraContact, .paraCopyright{
+    color: var(--paleCyan);
+    font-size: 12px;
+    width: 85%;
+}
 
+.contentHelp{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 0px;
+}
+
+.contentSocialmedia{
+    flex-direction: column;
+}
+
+.socialMedias{
+    width: 35%;
+    margin-bottom: 100px;
+}
+
+.paraCopyright{
+    font-size: 10px;
+    width: 100%;
+}
 
 @media only screen and (max-width:450px) {
     .container{
@@ -196,19 +245,39 @@ footer{
         font-size: 25px;
     }
 
-    .content.imageHero{
+    .content.imageHero, footer .content{
         width: 100%;
     }
 
-    .subcontainerFeatures{
-        flex-direction: column-reverse;
-    }
-
-    .subcontainerFeatures.conversations{
+    .subcontainerFeatures, .subcontainerFeatures.conversations{
         flex-direction: column-reverse;
     }
 
    .subcontainerCommunity{
-        width: 100%;
+        width: 80%;
+   }
+
+   footer{
+    flex-direction: column;
+    gap: 20px;
+    padding: 100px 10px 50px 10px;
+   }
+
+   .elementContact{
+    justify-content:space-around;
+   }
+
+   .contentHelp{
+    grid-template-columns: auto;
+   }
+
+   .contentSocialmedia{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+   }
+
+   .socialMedias{
+    margin-bottom: 10px;
    }
 }
